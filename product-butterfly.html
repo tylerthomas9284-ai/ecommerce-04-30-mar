@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Butterfly Set — MANE.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav__logo">MANE.</a>
+  <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="products.html" class="active">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav__right">
+    <a href="cart.html" class="nav__cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Cart <span class="badge" id="cart-count">0</span></a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu"><a href="index.html" onclick="toggleMenu()">Home</a><a href="products.html" onclick="toggleMenu()">Shop</a><a href="about.html" onclick="toggleMenu()">About</a><a href="contact.html" onclick="toggleMenu()">Contact</a><a href="cart.html" onclick="toggleMenu()">Cart</a></div>
+
+<div style="background:var(--black);padding:16px 0;border-bottom:3px solid var(--black);">
+  <div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="products.html">Shop</a><span>›</span><span style="color:#fff;">Crystal Butterfly Set</span></div></div>
+</div>
+
+<section class="product-detail">
+  <div class="product-detail__gallery">
+    <img class="product-detail__main-img" id="main-img"
+      src="https://images.unsplash.com/photo-1763347118969-824d513fa5dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=800"
+      alt="Crystal Butterfly Set">
+    <div class="product-detail__thumbs">
+      <img class="product-detail__thumb active" src="https://images.unsplash.com/photo-1763347118969-824d513fa5dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=140" data-full="https://images.unsplash.com/photo-1763347118969-824d513fa5dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=800" alt="V1">
+      <img class="product-detail__thumb" src="https://images.unsplash.com/photo-1643592029154-cc3b01ddc09a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=140" data-full="https://images.unsplash.com/photo-1643592029154-cc3b01ddc09a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=800" alt="V2">
+      <img class="product-detail__thumb" src="https://images.unsplash.com/photo-1565281173515-7a0faf2c1285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=140" data-full="https://images.unsplash.com/photo-1565281173515-7a0faf2c1285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=800" alt="V3">
+    </div>
+  </div>
+
+  <div class="product-detail__info">
+    <div class="product-detail__cat">Butterfly</div>
+    <h1 class="product-detail__name">Crystal Butterfly Set</h1>
+    <div class="product-detail__price-wrap">
+      <span class="product-detail__price">$45</span>
+      <span class="product-detail__price-old">$65</span>
+      <span style="background:var(--pink);color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border:2px solid var(--black);">30% OFF</span>
+    </div>
+    <div class="rating-wrap">
+      <span class="stars">★★★★★</span>
+      <span style="font-weight:700;">4.8</span>
+      <span class="rating-count">(298 reviews)</span>
+    </div>
+    <p class="product-detail__desc">Dazzling crystal-studded butterfly clips that genuinely turn heads. Lightweight zinc alloy construction with hand-set rhinestones — secure hinges, no loose crystals. Set of 5 assorted sizes so you can style everything from a tiny fringe clip to a full-volume updo anchor.</p>
+
+    <label class="detail-option-label">Crystal Tone:</label>
+    <div class="color-swatches">
+      <div class="swatch active" style="background:#C0C0C0;" title="Silver Crystal"></div>
+      <div class="swatch" style="background:#FFD700;" title="Gold Crystal"></div>
+      <div class="swatch" style="background:#E8CECE;" title="Rose Crystal"></div>
+      <div class="swatch" style="background:#B8D4E8;" title="Sapphire Crystal"></div>
+    </div>
+
+    <label class="detail-option-label">Quantity (sets):</label>
+    <div class="qty-control">
+      <button class="qty-btn" data-dir="down">−</button>
+      <input class="qty-input" id="qty-input" type="number" value="1" min="1" max="10">
+      <button class="qty-btn" data-dir="up">+</button>
+    </div>
+
+    <div class="product-detail__actions">
+      <button class="btn btn-pink btn-lg" onclick="addDetailToCart('p005')" style="flex:1;">Add to Cart</button>
+      <a href="checkout.html" class="btn btn-black btn-lg">Buy Now →</a>
+    </div>
+
+    <div class="product-detail__perks">
+      <div class="product-detail__perk"><span class="perk-icon">🚚</span> Free shipping on orders $60+</div>
+      <div class="product-detail__perk"><span class="perk-icon">↩️</span> 30-day hassle-free returns</div>
+      <div class="product-detail__perk"><span class="perk-icon">💳</span> Card, PayPal, or Cash on Delivery</div>
+      <div class="product-detail__perk"><span class="perk-icon">💎</span> Hand-set rhinestones — no loose crystals</div>
+    </div>
+
+    <div class="product-tabs">
+      <div class="product-tabs__nav">
+        <button class="product-tab-btn active" data-tab="desc">Description</button>
+        <button class="product-tab-btn" data-tab="specs">Specifications</button>
+        <button class="product-tab-btn" data-tab="inbox">In the Box</button>
+      </div>
+      <div class="product-tab-content active" id="tab-desc">
+        <p>The Crystal Butterfly Set brings maximum impact with minimum effort. Each butterfly shape is constructed from lightweight zinc alloy so they won't drag or pull, while each rhinestone is individually set for a clean, professional look that doesn't shed.</p>
+        <p>The hinge mechanism is strong and smooth — a satisfying click every time you clip in. Mix and match sizes within the set for layered looks, or use the largest piece as a statement on its own.</p>
+      </div>
+      <div class="product-tab-content" id="tab-specs">
+        <table class="spec-table">
+          <tr><td>Material</td><td>Zinc alloy + hand-set rhinestones</td></tr>
+          <tr><td>Set Size</td><td>5 clips (assorted sizes)</td></tr>
+          <tr><td>Sizes</td><td>2cm / 3cm / 4cm / 5cm / 6cm</td></tr>
+          <tr><td>Hinge</td><td>Heavy-duty smooth-action spring</td></tr>
+          <tr><td>Finish</td><td>Silver / Gold / Rose / Sapphire</td></tr>
+          <tr><td>Weight</td><td>Lightweight — won't drag hair</td></tr>
+          <tr><td>Nickel-free</td><td>Yes — hypoallergenic</td></tr>
+        </table>
+      </div>
+      <div class="product-tab-content" id="tab-inbox">
+        <ul>
+          <li>5 × Crystal Butterfly Clips (assorted sizes)</li>
+          <li>1 × MANE. velvet storage pouch</li>
+          <li>1 × Authenticity + care card</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div><div class="footer__logo">MANE.</div><p class="footer__tagline">Premium hair accessories. Brutally beautiful.</p><div class="footer__social"><a href="#">IG</a><a href="#">TK</a><a href="#">PT</a></div></div><div class="footer__col"><h4>Shop</h4><ul><li><a href="products.html">All Products</a></li><li><a href="product-scrunchie.html">Scrunchies</a></li><li><a href="product-clips.html">Clips</a></li><li><a href="product-claw.html">Claw Clips</a></li><li><a href="product-ribbon.html">Ribbons</a></li><li><a href="product-butterfly.html">Butterfly</a></li></ul></div><div class="footer__col"><h4>Info</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer__col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms & Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2026 MANE. All rights reserved.</span><div class="footer__payment"><span>We Accept:</span><span class="pay-badge">VISA</span><span class="pay-badge">MC</span><span class="pay-badge">PAYPAL</span><span class="pay-badge">COD</span></div></div></div></footer>
+<div class="cookie-banner" id="cookie-banner"><p>We use cookies. <a href="cookie-policy.html">Learn more</a></p><div class="cookie-banner__actions"><button class="btn btn-yellow btn-sm" onclick="acceptCookies()">Accept</button><button class="btn btn-outline btn-sm" style="border-color:var(--white);color:var(--white);" onclick="declineCookies()">Decline</button></div></div>
+<script src="js/script.js"></script>
+</body>
+</html>

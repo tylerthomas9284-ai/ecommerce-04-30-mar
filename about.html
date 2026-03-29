@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — MANE.</title>
+  <meta name="description" content="MANE. is a premium hair accessories brand built on one belief: your hair deserves better.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav__logo">MANE.</a>
+  <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="products.html">Shop</a></li><li><a href="about.html" class="active">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav__right">
+    <a href="cart.html" class="nav__cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Cart <span class="badge" id="cart-count">0</span></a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu"><a href="index.html" onclick="toggleMenu()">Home</a><a href="products.html" onclick="toggleMenu()">Shop</a><a href="about.html" onclick="toggleMenu()">About</a><a href="contact.html" onclick="toggleMenu()">Contact</a><a href="cart.html" onclick="toggleMenu()">Cart</a></div>
+
+<!-- HERO SPLIT -->
+<section class="about-hero">
+  <div class="about-content">
+    <div class="section-label">Our Story</div>
+    <h1 style="font-size:clamp(48px,6vw,80px);font-weight:700;letter-spacing:-3px;line-height:.95;margin-bottom:28px;">
+      We Made<br><span style="color:var(--pink);">Hair Care</span><br>Brutally<br>Beautiful.
+    </h1>
+    <p style="font-size:17px;line-height:1.75;color:#555;max-width:420px;margin-bottom:32px;">
+      MANE. was born out of frustration with cheap accessories that snap, slip, and leave creases. We set out to build something better — premium materials, honest prices, and designs that actually last.
+    </p>
+    <a href="products.html" class="btn btn-pink btn-lg">Shop the Collection →</a>
+  </div>
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1648010035195-6b0a56e14667?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=900" alt="About MANE.">
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>Premium Quality</span><span>Ethical Sourcing</span><span>No Nasty Chemicals</span><span>Cruelty Free</span><span>Woman Owned</span><span>Founded 2022</span><span>50K+ Customers</span><span>4.8★ Rating</span>
+    <span>Premium Quality</span><span>Ethical Sourcing</span><span>No Nasty Chemicals</span><span>Cruelty Free</span><span>Woman Owned</span><span>Founded 2022</span><span>50K+ Customers</span><span>4.8★ Rating</span>
+  </div>
+</div>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--white);border-bottom:3px solid var(--black);">
+  <div class="container">
+    <div class="section-head text-center" style="margin-bottom:52px;">
+      <div class="section-label" style="display:block;width:fit-content;margin:0 auto 14px;">Our Numbers</div>
+      <h2 class="section-title">What We Stand For</h2>
+    </div>
+    <div class="about-values">
+      <div class="about-value">
+        <div class="about-value__num">50K+</div>
+        <div class="about-value__title">Happy Customers</div>
+        <div class="about-value__desc">Over 50,000 customers across 30+ countries trust MANE. for their daily styling routine.</div>
+      </div>
+      <div class="about-value">
+        <div class="about-value__num">4.8★</div>
+        <div class="about-value__title">Average Rating</div>
+        <div class="about-value__desc">Verified reviews from real customers. We don't buy ratings — we earn them.</div>
+      </div>
+      <div class="about-value">
+        <div class="about-value__num">100%</div>
+        <div class="about-value__title">Premium Materials</div>
+        <div class="about-value__desc">Genuine silk, authentic satin, real velvet. We test every material before it touches our name.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR MISSION -->
+<section class="section">
+  <div class="container">
+    <div class="about-block">
+      <img src="https://images.unsplash.com/photo-1630081757603-a46d414be089?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=700" alt="Our Mission">
+      <div class="about-block__text">
+        <div class="section-label pink">Our Mission</div>
+        <h2>Accessories That<br>Work As Hard<br>As You Do.</h2>
+        <p>We started MANE. in 2022 because we were tired of buying accessories that broke after a week, slipped out mid-day, or left painful dents in our hair. There had to be something better.</p>
+        <p>So we sourced the same premium materials used in luxury salons — genuine satin, mulberry silk, reinforced velvet — and made them accessible without the absurd markup.</p>
+        <p>Every MANE. product is tested by our team before it ships. If it doesn't hold up in real life, it doesn't make the cut. Simple as that.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ETHICS -->
+<section class="section" style="background:var(--black);border-top:3px solid var(--black);border-bottom:3px solid var(--black);">
+  <div class="container">
+    <div class="section-head text-center" style="margin-bottom:60px;">
+      <div class="section-label" style="display:block;width:fit-content;margin:0 auto 14px;">Our Commitments</div>
+      <h2 class="section-title" style="color:var(--white);">We Believe In<br><span style="color:var(--pink);">Doing Better.</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:3px solid #333;">
+      <div style="padding:40px 32px;border-right:3px solid #333;color:var(--white);">
+        <div style="font-size:36px;margin-bottom:16px;">🌱</div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:10px;color:var(--yellow);">Ethical Sourcing</h3>
+        <p style="font-size:14px;color:#999;line-height:1.7;">All materials are ethically sourced. We audit our supply chain annually and publish the results.</p>
+      </div>
+      <div style="padding:40px 32px;border-right:3px solid #333;color:var(--white);">
+        <div style="font-size:36px;margin-bottom:16px;">🐰</div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:10px;color:var(--yellow);">Cruelty-Free</h3>
+        <p style="font-size:14px;color:#999;line-height:1.7;">MANE. is 100% cruelty-free. No animal testing, ever. Our silk is from certified responsible farms.</p>
+      </div>
+      <div style="padding:40px 32px;border-right:3px solid #333;color:var(--white);">
+        <div style="font-size:36px;margin-bottom:16px;">♻️</div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:10px;color:var(--yellow);">Low-Waste Packaging</h3>
+        <p style="font-size:14px;color:#999;line-height:1.7;">Our packaging is 95% recycled or recyclable. We're working on making it 100% by 2027.</p>
+      </div>
+      <div style="padding:40px 32px;color:var(--white);">
+        <div style="font-size:36px;margin-bottom:16px;">💼</div>
+        <h3 style="font-size:18px;font-weight:700;margin-bottom:10px;color:var(--yellow);">Women-Led</h3>
+        <p style="font-size:14px;color:#999;line-height:1.7;">MANE. is founded and led by women, for women. Gender equity isn't a talking point here — it's the baseline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--pink);border-bottom:3px solid var(--black);padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 style="font-size:clamp(36px,5vw,60px);font-weight:700;letter-spacing:-2px;color:var(--white);margin-bottom:16px;line-height:1.1;">Ready to Upgrade<br>Your Hair Game?</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,.8);margin-bottom:36px;">Join 50,000+ customers who made the switch to MANE.</p>
+    <a href="products.html" class="btn btn-yellow btn-lg">Shop All Products →</a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container">
+    <h2>Join the <span>MANE.</span> Family</h2>
+    <p>Early access to new drops, exclusive deals, and styling tips. Unsubscribe anytime.</p>
+    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div><div class="footer__logo">MANE.</div><p class="footer__tagline">Premium hair accessories for the bold, the fearless, and the fabulous.</p><div class="footer__social"><a href="#">IG</a><a href="#">TK</a><a href="#">PT</a><a href="#">YT</a></div></div><div class="footer__col"><h4>Shop</h4><ul><li><a href="products.html">All Products</a></li><li><a href="product-scrunchie.html">Scrunchies</a></li><li><a href="product-clips.html">Clips</a></li><li><a href="product-claw.html">Claw Clips</a></li><li><a href="product-ribbon.html">Ribbons</a></li><li><a href="product-butterfly.html">Butterfly</a></li></ul></div><div class="footer__col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer__col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms & Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2026 MANE. All rights reserved.</span><div class="footer__payment"><span>We Accept:</span><span class="pay-badge">VISA</span><span class="pay-badge">MC</span><span class="pay-badge">PAYPAL</span><span class="pay-badge">COD</span></div></div></div></footer>
+<div class="cookie-banner" id="cookie-banner"><p>We use cookies. <a href="cookie-policy.html">Learn more</a></p><div class="cookie-banner__actions"><button class="btn btn-yellow btn-sm" onclick="acceptCookies()">Accept</button><button class="btn btn-outline btn-sm" style="border-color:var(--white);color:var(--white);" onclick="declineCookies()">Decline</button></div></div>
+<script src="js/script.js"></script>
+</body>
+</html>

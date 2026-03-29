@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — MANE.</title>
+  <meta name="description" content="Get in touch with MANE. — we reply within 24 hours on business days.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav__logo">MANE.</a>
+  <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="products.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="active">Contact</a></li></ul>
+  <div class="nav__right">
+    <a href="cart.html" class="nav__cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Cart <span class="badge" id="cart-count">0</span></a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu"><a href="index.html" onclick="toggleMenu()">Home</a><a href="products.html" onclick="toggleMenu()">Shop</a><a href="about.html" onclick="toggleMenu()">About</a><a href="contact.html" onclick="toggleMenu()">Contact</a><a href="cart.html" onclick="toggleMenu()">Cart</a></div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:#fff;">Contact</span></div>
+    <h1>Get In <em>Touch</em></h1>
+    <p class="page-header__sub">We reply to every message within 24 hours on business days.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Left: Info Cards -->
+      <div>
+        <div class="contact-card">
+          <div class="contact-card__icon">📧</div>
+          <h3>Email Us</h3>
+          <p>For orders, returns, and general questions:</p>
+          <a href="mailto:hello@mane.site">hello@mane.site</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">📞</div>
+          <h3>Call Us</h3>
+          <p>Mon – Fri, 9am – 6pm EST</p>
+          <a href="tel:+15555550100">+1 (555) 555-0100</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">📍</div>
+          <h3>Our Address</h3>
+          <p>MANE. Headquarters<br>230 West 55th Street, Suite 400<br>New York, NY 10019<br>United States</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">⏱</div>
+          <h3>Response Time</h3>
+          <p>We aim to reply within <strong>24 hours</strong> on business days. For urgent issues, please call us directly.</p>
+        </div>
+
+        <!-- Social -->
+        <div style="margin-top:28px;padding:28px;background:var(--black);border:3px solid var(--black);color:var(--white);">
+          <h3 style="font-size:16px;font-weight:700;margin-bottom:16px;color:var(--yellow);">Follow MANE.</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a href="#" style="color:#aaa;text-decoration:none;font-size:14px;transition:color .15s;" onmouseover="this.style.color='#FF2D6B'" onmouseout="this.style.color='#aaa'">📸 Instagram — @mane.hair</a>
+            <a href="#" style="color:#aaa;text-decoration:none;font-size:14px;" onmouseover="this.style.color='#FF2D6B'" onmouseout="this.style.color='#aaa'">🎵 TikTok — @mane.hair</a>
+            <a href="#" style="color:#aaa;text-decoration:none;font-size:14px;" onmouseover="this.style.color='#FF2D6B'" onmouseout="this.style.color='#aaa'">📌 Pinterest — MANE.</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form + FAQ -->
+      <div>
+        <div class="form-card">
+          <div class="form-card__head">Send Us a Message</div>
+          <div class="form-card__body">
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First Name *</label>
+                  <input type="text" placeholder="Jane" required>
+                </div>
+                <div class="form-group">
+                  <label>Last Name *</label>
+                  <input type="text" placeholder="Smith" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="jane@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>Order Number (if applicable)</label>
+                <input type="text" placeholder="MN-1234">
+              </div>
+              <div class="form-group">
+                <label>Subject *</label>
+                <select required>
+                  <option value="">Select a topic</option>
+                  <option>Order Status & Tracking</option>
+                  <option>Returns & Exchanges</option>
+                  <option>Product Question</option>
+                  <option>Wholesale Inquiry</option>
+                  <option>Partnership / PR</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Message *</label>
+                <textarea placeholder="Tell us how we can help you..." style="min-height:140px;" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-pink btn-full btn-lg">Send Message →</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div style="margin-top:40px;">
+          <div class="section-label mb-16">Common Questions</div>
+          <h2 style="font-size:28px;font-weight:700;letter-spacing:-1px;margin-bottom:28px;">FAQ</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">How long does shipping take? <span>+</span></div>
+            <div class="faq-answer">Standard shipping takes 3–7 business days. Expedited (2-day) and overnight options are available at checkout. All orders are dispatched within 1 business day.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can I return or exchange? <span>+</span></div>
+            <div class="faq-answer">Yes! We offer 30-day hassle-free returns and exchanges. Items must be unused and in original packaging. Email us at hello@mane.site to start a return.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Is Cash on Delivery available? <span>+</span></div>
+            <div class="faq-answer">Yes — COD is available for all US delivery addresses. Select "Cash on Delivery" at checkout. No extra fee. You pay the driver when your order arrives.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Do you ship internationally? <span>+</span></div>
+            <div class="faq-answer">We currently ship to the US, Canada, UK, Australia, and most of Europe. International orders typically arrive in 7–14 business days. COD is only available in the US.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Are your products safe for all hair types? <span>+</span></div>
+            <div class="faq-answer">Absolutely. All MANE. products are designed for all hair types — fine, thick, curly, wavy, natural, and color-treated. Our satin and silk products are especially recommended for color-treated and fragile hair.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div><div class="footer__logo">MANE.</div><p class="footer__tagline">Premium hair accessories for the bold, the fearless, and the fabulous.</p><div class="footer__social"><a href="#">IG</a><a href="#">TK</a><a href="#">PT</a><a href="#">YT</a></div></div><div class="footer__col"><h4>Shop</h4><ul><li><a href="products.html">All Products</a></li><li><a href="product-scrunchie.html">Scrunchies</a></li><li><a href="product-clips.html">Clips</a></li><li><a href="product-claw.html">Claw Clips</a></li><li><a href="product-ribbon.html">Ribbons</a></li></ul></div><div class="footer__col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer__col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms & Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2026 MANE. All rights reserved.</span><div class="footer__payment"><span>We Accept:</span><span class="pay-badge">VISA</span><span class="pay-badge">MC</span><span class="pay-badge">PAYPAL</span><span class="pay-badge">COD</span></div></div></div></footer>
+<div class="cookie-banner" id="cookie-banner"><p>We use cookies. <a href="cookie-policy.html">Learn more</a></p><div class="cookie-banner__actions"><button class="btn btn-yellow btn-sm" onclick="acceptCookies()">Accept</button><button class="btn btn-outline btn-sm" style="border-color:var(--white);color:var(--white);" onclick="declineCookies()">Decline</button></div></div>
+<script src="js/script.js"></script>
+</body>
+</html>

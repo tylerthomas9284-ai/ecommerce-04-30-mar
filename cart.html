@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart — MANE.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav__logo">MANE.</a>
+  <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="products.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav__right">
+    <a href="cart.html" class="nav__cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Cart <span class="badge" id="cart-count">0</span></a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu"><a href="index.html" onclick="toggleMenu()">Home</a><a href="products.html" onclick="toggleMenu()">Shop</a><a href="about.html" onclick="toggleMenu()">About</a><a href="contact.html" onclick="toggleMenu()">Contact</a><a href="cart.html" onclick="toggleMenu()">Cart</a></div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:#fff;">Cart</span></div>
+    <h1>Your <em>Cart</em></h1>
+    <p class="page-header__sub">Review your items, then head to checkout.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Empty state -->
+    <div id="cart-empty" style="display:none;">
+      <div class="cart-empty">
+        <div class="cart-empty__icon">🛍</div>
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added anything yet. Time to change that.</p>
+        <a href="products.html" class="btn btn-pink btn-lg">Start Shopping →</a>
+      </div>
+    </div>
+
+    <!-- Cart with items -->
+    <div id="cart-full" style="display:none;" class="cart-layout">
+
+      <!-- Items Column -->
+      <div>
+        <div class="cart-table">
+          <div class="cart-table__head">
+            <span>Product</span>
+            <span>Price</span>
+            <span>Quantity</span>
+            <span>Total</span>
+            <span></span>
+          </div>
+          <div id="cart-items">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;margin-top:20px;flex-wrap:wrap;gap:12px;">
+          <a href="products.html" class="btn btn-outline">← Continue Shopping</a>
+          <button class="btn btn-outline" onclick="renderCartPage()">Update Cart</button>
+        </div>
+      </div>
+
+      <!-- Summary Column -->
+      <div>
+        <div class="order-summary">
+          <div class="order-summary__head">Order Summary</div>
+          <div class="order-summary__body">
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="summary-subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span id="summary-shipping">$5.99</span>
+            </div>
+            <div class="summary-row" style="font-size:12px;color:#aaa;border-bottom:none;padding-top:4px;">
+              <span>Free shipping on orders over $60</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <strong id="summary-total">$0.00</strong>
+            </div>
+
+            <div style="margin:20px 0;">
+              <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;display:block;">Promo Code</label>
+              <div class="promo-input">
+                <input id="promo-input" type="text" placeholder="e.g. MANE10">
+                <button onclick="applyPromo()">Apply</button>
+              </div>
+            </div>
+
+            <a href="checkout.html" class="btn btn-pink btn-full btn-lg" style="margin-bottom:12px;">Proceed to Checkout →</a>
+            <div style="text-align:center;font-size:12px;color:#aaa;margin-top:12px;">
+              🔒 Secure checkout &nbsp;·&nbsp; Free returns &nbsp;·&nbsp; COD available
+            </div>
+
+            <div style="margin-top:20px;padding-top:20px;border-top:2px solid #eee;">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#aaa;margin-bottom:12px;">We Accept</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <span class="pay-badge" style="background:var(--cream);color:var(--black);border:2px solid #ddd;">VISA</span>
+                <span class="pay-badge" style="background:var(--cream);color:var(--black);border:2px solid #ddd;">MASTERCARD</span>
+                <span class="pay-badge" style="background:var(--cream);color:var(--black);border:2px solid #ddd;">AMEX</span>
+                <span class="pay-badge" style="background:var(--cream);color:var(--black);border:2px solid #ddd;">PAYPAL</span>
+                <span class="pay-badge" style="background:var(--yellow);color:var(--black);border:2px solid var(--black);">COD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div><div class="footer__logo">MANE.</div><p class="footer__tagline">Premium hair accessories. Brutally beautiful.</p><div class="footer__social"><a href="#">IG</a><a href="#">TK</a><a href="#">PT</a></div></div><div class="footer__col"><h4>Shop</h4><ul><li><a href="products.html">All Products</a></li><li><a href="product-scrunchie.html">Scrunchies</a></li><li><a href="product-clips.html">Clips</a></li></ul></div><div class="footer__col"><h4>Info</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer__col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms & Conditions</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2026 MANE. All rights reserved.</span><div class="footer__payment"><span>We Accept:</span><span class="pay-badge">VISA</span><span class="pay-badge">MC</span><span class="pay-badge">PAYPAL</span><span class="pay-badge">COD</span></div></div></div></footer>
+<div class="cookie-banner" id="cookie-banner"><p>We use cookies. <a href="cookie-policy.html">Learn more</a></p><div class="cookie-banner__actions"><button class="btn btn-yellow btn-sm" onclick="acceptCookies()">Accept</button><button class="btn btn-outline btn-sm" style="border-color:var(--white);color:var(--white);" onclick="declineCookies()">Decline</button></div></div>
+<script src="js/script.js"></script>
+</body>
+</html>
